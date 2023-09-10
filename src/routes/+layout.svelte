@@ -1,6 +1,10 @@
 <script>
 	import "../app.css";
 	import { page } from "$app/stores";
+
+	export let data;
+
+	let { title, description } = data;
 </script>
 
 <div
@@ -12,35 +16,40 @@
 	<div class="max-w-5xl mx-auto">
 		<div class="ml-auto lg:w-2/3">
 			<h1 class="text-white mb-5 text-4xl lg:text-5xl xl:text-6xl">
-				Nature Craft
+				{title}
 			</h1>
-			<p class="text-xl mb-5">Lorem ipsum dolor sit amet consectetur.</p>
-			<div class="">
+			<p class="text-xl mb-5">{description}</p>
+			<div class="flex flex-wrap gap-5 items-center">
 				{#if $page.url.pathname !== "/"}
-					<a href="/" class="">
-						<span class="sr-only">uikit icon home</span>
-						<svg
-							class=""
-							width="40"
-							height="40"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							><polygon
-								points="18.65 11.35 10 2.71 1.35 11.35 0.65 10.65 10 1.29 19.35 10.65"
-							/><polygon points="15 4 18 4 18 7 17 7 17 5 15 5" /><polygon
-								points="3 11 4 11 4 18 7 18 7 12 12 12 12 18 16 18 16 11 17 11 17 19 11 19 11 13 8 13 8 19 3 19"
-							/></svg
-						>
-					</a>
+					<div class="">
+						<a href="/" class="">
+							<span class="sr-only">uikit icon home</span>
+							<svg
+								class=""
+								width="40"
+								height="40"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								><polygon
+									points="18.65 11.35 10 2.71 1.35 11.35 0.65 10.65 10 1.29 19.35 10.65"
+								/><polygon points="15 4 18 4 18 7 17 7 17 5 15 5" /><polygon
+									points="3 11 4 11 4 18 7 18 7 12 12 12 12 18 16 18 16 11 17 11 17 19 11 19 11 13 8 13 8 19 3 19"
+								/></svg
+							>
+						</a>
+					</div>
 				{/if}
-				<a
-					href="/blog"
-					class="inline-block bg-white text-black mr-5 mb-5 px-10 py-4">Blogs</a
-				>
-				<a href="/#about" class="inline-block border mr-5 mb-5 px-7 py-2"
-					>About</a
-				>
-				<a href="/#donate" class="inline-block mr-5 mb-5">Donate</a>
+				<div class="">
+					<a href="/blog" class="inline-block bg-white text-black px-10 py-4"
+						>Blogs</a
+					>
+				</div>
+				<div class="">
+					<a href="/#about" class="inline-block border px-7 py-2">About</a>
+				</div>
+				<div class="">
+					<a href="/#donate" class="inline-block">Donate</a>
+				</div>
 			</div>
 		</div>
 	</div>
