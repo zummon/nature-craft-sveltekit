@@ -11,9 +11,9 @@
 
 <div class="mb-10 lg:mb-20">
 	<div class="container mx-auto mb-10">
-		<div class="flex gap-6 snap-x">
+		<div class="flex gap-6 snap-x overflow-x-auto">
 			{#each data.blogs as { title, description, image, slug }, index (index)}
-				<div class="md:w-1/3 sm:w-1/2 shadow-lg snap-center">
+				<div class="shadow-lg snap-center">
 					<div
 						class="h-52 bg-cover"
 						style:background-image="url({image.src})"

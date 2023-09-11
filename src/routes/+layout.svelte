@@ -18,7 +18,7 @@
 			<h1 class="text-white mb-5 text-4xl lg:text-5xl xl:text-6xl">
 				{title}
 			</h1>
-			<p class="text-xl mb-5">{description}</p>
+			<p class="text-2xl mb-5">{description}</p>
 			<div class="flex flex-wrap gap-5 items-center">
 				{#if $page.url.pathname !== "/"}
 					<div class="">
