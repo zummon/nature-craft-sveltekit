@@ -1,9 +1,8 @@
 export const prerender = true;
 
 export const load = async ({ parent }) => {
-  let result = [];
 
-  result = await parent()
+  let data = await parent()
 
-  return { blogs: result.blogs };
+  return { ...data, };
 };

@@ -1,8 +1,11 @@
-export const prerender = true;
-
-export const load = async ({ }) => {
+export const load = async ({ url }) => {
   let title = "Nature Craft";
   let description = "Lorem ipsum dolor sit amet consectetur.";
+
+  if (url.pathname == '/blog') {
+    title = "Blogs"
+    description = "Fugit quasi ullam reiciendis totam culpa."
+  }
 
   let result = [];
   const markdowns = import.meta.glob('../lib/blogs/*.md');
@@ -15,11 +18,12 @@ export const load = async ({ }) => {
 
       result.push({
         ...metadata,
+        date: new Date(metadata.date).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }),
         content,
         slug,
       });
     });
   }
 
-  return { title, description, blogs: result };
+  return { title, description, blogs: result, pathname: url.pathname };
 };

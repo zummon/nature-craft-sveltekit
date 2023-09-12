@@ -1,9 +1,14 @@
-export const prerender = true;
 
-export const load = async ({ params }) => {
-  const markdown = await import(`../../../lib/blogs/${params.slug}.md`);
-  let content = markdown.default;
-  let metadata = markdown.metadata;
+export const load = async ({ params, parent }) => {
 
-  return { ...metadata, content };
+  let data = await parent()
+  let blog = data.blogs.find(blog => {
+    return blog.slug == params.slug
+  })
+
+  if (blog) {
+    return { ...blog };
+  }
+
+  return {};
 };

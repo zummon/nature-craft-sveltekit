@@ -1,14 +1,11 @@
 <script>
 	import "../app.css";
-	import { page } from "$app/stores";
 
 	export let data;
-
-	let { title, description } = data;
 </script>
 
 <div
-	class="{$page.url.pathname == '/'
+	class="{data.pathname == '/'
 		? 'py-20 lg:py-40'
 		: 'py-10 lg:py-20'} bg-zinc-800 text-zinc-50 bg-cover bg-fixed bg-blend-soft-light bg-center"
 	style:background-image="url(https://images.pexels.com/photos/6102217/pexels-photo-6102217.jpeg?w=1280)"
@@ -16,11 +13,11 @@
 	<div class="max-w-5xl mx-auto">
 		<div class="ml-auto lg:w-2/3">
 			<h1 class="text-white mb-5 text-4xl lg:text-5xl xl:text-6xl">
-				{title}
+				{data.title}
 			</h1>
-			<p class="text-2xl mb-5">{description}</p>
+			<p class="text-2xl mb-5">{data.description}</p>
 			<div class="flex flex-wrap gap-5 items-center">
-				{#if $page.url.pathname !== "/"}
+				{#if data.pathname !== "/"}
 					<div class="">
 						<a href="/" class="">
 							<span class="sr-only">uikit icon home</span>
@@ -48,7 +45,10 @@
 					<a href="/#about" class="inline-block border px-7 py-2">About</a>
 				</div>
 				<div class="">
-					<a href="/#donate" class="inline-block">Donate</a>
+					<a
+						href="/#donate"
+						class="inline-block hover:underline underline-offset-4">Donate</a
+					>
 				</div>
 			</div>
 		</div>

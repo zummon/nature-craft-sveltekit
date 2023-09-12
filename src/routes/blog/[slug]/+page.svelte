@@ -1,15 +1,15 @@
 <script>
 	export let data;
-	let { date, description, image, title, tags } = data;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
+	<title>{data.title}</title>
+	<meta name="description" content={data.description} />
 </svelte:head>
 
-<div
-	class="prose prose-invert prose-img:rounded-xl prose-img:mx-auto prose-img:object-contain prose-img:max-h-96 prose-img:max-w-full max-w-none px-4 sm:px-8 mb-8"
->
-	<svelte:component this={data.content} />
+<div class="max-w-5xl mx-auto">
+	<div class="text-2xl mb-4 px-4 sm:px-8">{data.date}</div>
+	<div class="prose prose-img:mx-auto max-w-none px-4 sm:px-8">
+		<svelte:component this={data.content} />
+	</div>
 </div>
