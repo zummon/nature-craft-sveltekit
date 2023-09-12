@@ -69,7 +69,7 @@
 		>
 			<div class="p-8">
 				<h3 class="text-2xl mb-4">List</h3>
-				<ul class="list-inside list-['-']">
+				<ul class="list-inside list-['-'] space-y-2">
 					<li class="">
 						<a class="" href="/#">Lorem, ipsum.</a>
 					</li>
