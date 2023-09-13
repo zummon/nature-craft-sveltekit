@@ -11,7 +11,7 @@
 	<div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2">
 		{#each data.blogs as item, index (index)}
 			<div
-				class="shadow-lg flex flex-col justify-between"
+				class="shadow-lg flex flex-col justify-between bg-white"
 				class:bg-zinc-900={item.invert}
 				class:text-white={item.invert}
 			>

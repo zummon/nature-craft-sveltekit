@@ -1,12 +1,6 @@
-export const load = async ({ url }) => {
+export const load = async ({ url, params }) => {
   let title = "Nature Craft";
   let description = "Lorem ipsum dolor sit amet consectetur.";
-
-  if (url.pathname == '/blog') {
-    title = "Blogs"
-    description = "Fugit quasi ullam reiciendis totam culpa."
-  }
-
   let result = [];
   const markdowns = import.meta.glob('../lib/blogs/*.md');
 
@@ -23,6 +17,19 @@ export const load = async ({ url }) => {
         slug,
       });
     });
+  }
+
+  if (url.pathname == '/blog') {
+    title = "Blogs"
+    description = "Fugit quasi ullam reiciendis totam culpa."
+  }
+
+  let blog = result.find(blog => {
+    return blog.slug == params.slug
+  })
+
+  if (blog) {
+    return { ...blog };
   }
 
   return { title, description, blogs: result, pathname: url.pathname };

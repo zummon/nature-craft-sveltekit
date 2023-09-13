@@ -11,7 +11,7 @@
 	<div class="flex gap-6 overflow-x-auto snap-x">
 		{#each data.blogs as item, index (index)}
 			<div
-				class="shadow-lg flex flex-col justify-between min-w-[320px] mb-8 snap-center"
+				class="shadow-lg flex flex-col justify-between min-w-[320px] mb-8 snap-center bg-white"
 				class:bg-zinc-900={item.invert}
 				class:text-white={item.invert}
 			>
@@ -45,7 +45,7 @@
 </div>
 
 <div class="mb-10">
-	<div class="flex items-center lg:w-2/3 shadow-xl">
+	<div class="flex items-center lg:w-2/3 shadow-xl bg-white">
 		<div
 			class="w-1/3 h-80 lg:h-96 bg-cover bg-center"
 			style:background-image="url(https://images.pexels.com/photos/6137913/pexels-photo-6137913.jpeg?w=640)"
@@ -66,7 +66,7 @@
 	</div>
 </div>
 
-<div class="">
+<div class="mb-10">
 	<div
 		class="flex items-center lg:w-2/3 shadow-xl ml-auto bg-zinc-900 text-white"
 	>
@@ -89,5 +89,19 @@
 			class="w-1/3 h-80 lg:h-96 bg-cover bg-center"
 			style:background-image="url(https://images.pexels.com/photos/6207392/pexels-photo-6207392.jpeg?w=640)"
 		/>
+	</div>
+</div>
+
+<div class="">
+	<div class="flex items-center lg:w-1/2 shadow-xl mx-auto bg-white">
+		<div class="p-4 lg:p-8 text-center">
+			<h2 class="text-3xl lg:text-4xl xl:text-5xl mb-4 lg:mb-8">Other</h2>
+			<p class="text-xl mb-4 lg:mb-8">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas harum quo
+				doloremque sequi quis laborum delectus animi soluta. Minima doloribus
+				ullam omnis sit veniam itaque beatae aspernatur illo odit dolore?
+			</p>
+			<p class="italic">Lorem ipsum dolor sit amet.</p>
+		</div>
 	</div>
 </div>

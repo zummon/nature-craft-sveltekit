@@ -47,7 +47,8 @@
 				<div class="">
 					<a
 						href="/#donate"
-						class="inline-block hover:underline underline-offset-4">Donate</a
+						class="inline-block hover:underline focus:underline underline-offset-4"
+						>Donate</a
 					>
 				</div>
 			</div>
@@ -71,16 +72,28 @@
 				<h3 class="text-2xl mb-4">List</h3>
 				<ul class="list-inside list-['-'] space-y-2">
 					<li class="">
-						<a class="" href="/#">Lorem, ipsum.</a>
+						<a
+							class="hover:underline focus:underline underline-offset-4"
+							href="/#">Lorem, ipsum.</a
+						>
 					</li>
 					<li class="">
-						<a class="" href="/#">Lorem, ipsum.</a>
+						<a
+							class="hover:underline focus:underline underline-offset-4"
+							href="/#">Lorem, ipsum.</a
+						>
 					</li>
 					<li class="">
-						<a class="" href="/#">Lorem, ipsum.</a>
+						<a
+							class="hover:underline focus:underline underline-offset-4"
+							href="/#">Lorem, ipsum.</a
+						>
 					</li>
 					<li class="">
-						<a class="" href="/#">Lorem, ipsum.</a>
+						<a
+							class="hover:underline focus:underline underline-offset-4"
+							href="/#">Lorem, ipsum.</a
+						>
 					</li>
 				</ul>
 			</div>
