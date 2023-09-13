@@ -107,7 +107,7 @@
 			<div class="p-8">
 				<h3 class="text-2xl mb-4">Paragraph</h3>
 				<p class="">
-					<a class="" href="https://zummon.page/"
+					<a class="" href="https://zummon.page/" target="_blank"
 						>Made by zummon (Teerapat Anantarattanachai)</a
 					>
 				</p>
