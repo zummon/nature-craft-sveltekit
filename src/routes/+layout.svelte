@@ -37,12 +37,18 @@
 					</div>
 				{/if}
 				<div class="">
-					<a href="/blog" class="inline-block bg-white text-black px-10 py-4"
+					<a
+						href="/blog"
+						class="inline-block bg-white text-black px-10 py-4 shadow-md hover:bg-zinc-100 focus:bg-zinc-100"
 						>Blogs</a
 					>
 				</div>
 				<div class="">
-					<a href="/#about" class="inline-block border px-7 py-2">About</a>
+					<a
+						href="/#about"
+						class="inline-block border border-zinc-400 px-7 py-2 hover:border-white focus:border-white"
+						>About</a
+					>
 				</div>
 				<div class="">
 					<a
@@ -70,7 +76,7 @@
 		>
 			<div class="p-8">
 				<h3 class="text-2xl mb-4">List</h3>
-				<ul class="list-inside list-['-'] space-y-2">
+				<ul class="list-inside list-disc space-y-2">
 					<li class="">
 						<a
 							class="hover:underline focus:underline underline-offset-4"
@@ -101,7 +107,9 @@
 			<div class="p-8">
 				<h3 class="text-2xl mb-4">Paragraph</h3>
 				<p class="">
-					<span class="">Made by zummon (Teerapat Anantarattanachai)</span>
+					<a class="" href="https://zummon.page/"
+						>Made by zummon (Teerapat Anantarattanachai)</a
+					>
 				</p>
 			</div>
 

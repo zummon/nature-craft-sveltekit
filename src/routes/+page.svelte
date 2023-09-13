@@ -7,37 +7,39 @@
 	<meta name="description" content={data.description} />
 </svelte:head>
 
-<div class="max-w-5xl mx-auto mb-10">
-	<div class="flex gap-6 overflow-x-auto snap-x">
+<div class="max-w-6xl mx-auto mb-10">
+	<div class="flex gap-6 overflow-x-clip snap-x pb-8 lg:gap-9">
 		{#each data.blogs as item, index (index)}
 			<div
-				class="shadow-lg flex flex-col justify-between min-w-[320px] mb-8 snap-center bg-white"
+				class="shadow-lg flex flex-col min-w-[360px] snap-center bg-white"
 				class:bg-zinc-900={item.invert}
 				class:text-white={item.invert}
 			>
 				<div
-					class="h-60 bg-cover bg-center flex"
+					class="h-72 bg-cover bg-center flex"
 					style:background-image="url({item.image.src})"
 				>
 					<div class="my-4 mr-4 ml-auto">
 						<span
-							class="py-0.5 px-2 text-sm {item.invert
+							class="py-0.5 px-2 text-sm shadow {item.invert
 								? 'bg-zinc-900'
 								: 'bg-white'}">{item.date}</span
 						>
 					</div>
 				</div>
-				<div class="p-8">
-					<h3 class="mb-4 text-2xl">{item.title}</h3>
-					<p class="mb-4">
+				<div class="p-8 flex flex-col gap-4 flex-1 justify-between">
+					<h3 class="text-2xl">{item.title}</h3>
+					<p class="">
 						{item.description}
 					</p>
-					<a
-						class="inline-block px-7 py-2 {item.invert
-							? 'bg-white text-black'
-							: 'bg-zinc-900 text-white'}"
-						href="/blog/{item.slug}">Read</a
-					>
+					<div class="">
+						<a
+							class="inline-block px-7 py-2 shadow {item.invert
+								? 'bg-white text-black'
+								: 'bg-zinc-900 text-white'}"
+							href="/blog/{item.slug}">Read</a
+						>
+					</div>
 				</div>
 			</div>
 		{/each}
