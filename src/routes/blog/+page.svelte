@@ -11,9 +11,9 @@
 	<div class="grid gap-6 md:grid-cols-3 sm:grid-cols-2 lg:gap-9">
 		{#each data.blogs as item, index (index)}
 			<div
-				class="shadow-lg flex flex-col bg-white"
-				class:bg-zinc-900={item.invert}
-				class:text-white={item.invert}
+				class="shadow-lg flex flex-col {item.invert
+					? 'bg-zinc-900 text-white'
+					: 'bg-white'}"
 			>
 				<div
 					class="h-72 bg-cover bg-center flex"

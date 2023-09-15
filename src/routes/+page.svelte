@@ -11,9 +11,9 @@
 	<div class="flex gap-6 overflow-x-clip snap-x pb-8 lg:gap-9">
 		{#each data.blogs as item, index (index)}
 			<div
-				class="shadow-lg flex flex-col min-w-[360px] snap-center bg-white"
-				class:bg-zinc-900={item.invert}
-				class:text-white={item.invert}
+				class="shadow-lg flex flex-col min-w-[360px] snap-center {item.invert
+					? 'bg-zinc-900 text-white'
+					: 'bg-white'}"
 			>
 				<div
 					class="h-72 bg-cover bg-center flex"
