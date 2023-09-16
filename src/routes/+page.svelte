@@ -8,7 +8,7 @@
 </svelte:head>
 
 <div class="max-w-6xl mx-auto mb-10">
-	<div class="flex gap-6 overflow-x-clip snap-x pb-8 lg:gap-9">
+	<div class="flex gap-6 overflow-x-auto snap-x pb-8 lg:gap-9">
 		{#each data.blogs as item, index (index)}
 			<div
 				class="shadow-lg flex flex-col min-w-[360px] snap-center {item.invert
