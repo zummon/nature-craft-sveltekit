@@ -5,10 +5,10 @@
 </script>
 <!-- Photo by Laura James: https://www.pexels.com/photo/wooden-reindeer-placed-in-greenery-composition-6102217/ -->
 <div
-	class="{data.pathname == '/'
+	class="bg-zinc-800 text-zinc-50 bg-cover bg-fixed bg-blend-soft-light bg-center px-6 lg:px-0 {data.pathname == '/'
 		? 'py-20 lg:py-40'
-		: 'py-10 lg:py-20'} bg-zinc-800 text-zinc-50 bg-cover bg-fixed bg-blend-soft-light bg-center"
-	style:background-image="url(https://i.imgur.com/tuhsYYx.jpeg)"
+		: 'py-10 lg:py-20'}"
+	style="background-image: url(https://i.imgur.com/tuhsYYx.jpeg)"
 >
 	<div class="max-w-5xl mx-auto">
 		<div class="ml-auto lg:w-2/3">
@@ -19,8 +19,9 @@
 			<div class="flex flex-wrap gap-5 items-center">
 				{#if data.pathname !== "/"}
 					<div class="">
+						<!-- uikit icons -->
 						<a href="/" class="">
-							<!-- uikit icon home -->
+							<span class="sr-only">home icon</span>
 							<svg
 								class=""
 								width="40"
@@ -69,7 +70,7 @@
 <!-- Photo by Mathias Reding: https://www.pexels.com/photo/decorative-cage-with-pine-cones-5483826/ -->
 <div
 	class="py-10 lg:py-20 bg-zinc-800 text-zinc-50 bg-cover bg-fixed bg-blend-soft-light bg-center"
-	style:background-image="url(https://i.imgur.com/eVz3Y8v.jpg)"
+	style="background-image: url(https://i.imgur.com/eVz3Y8v.jpg)"
 >
 	<div class="max-w-5xl mx-auto">
 		<div
@@ -163,7 +164,7 @@
 					>
 				</a>
 				<a
-					href="https://youtube.com/" target="_blank"
+					href="https://youtube.com/channel/UCSqTXx-ChE0J3qlr84xcgrA" target="_blank"
 					class="mr-3 mb-3 rounded-full p-2 bg-white bg-opacity-20 hover:bg-opacity-40 inline-block"
 				>
 					<span class="sr-only">youtube icon</span>

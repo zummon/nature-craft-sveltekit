@@ -27,7 +27,7 @@
 						>
 					</div>
 				</div>
-				<div class="p-8 flex flex-col gap-4 flex-1 justify-between">
+				<div class="p-4 sm:p-6 lg:p-8 flex flex-col gap-4 flex-1 justify-between">
 					<h3 class="text-2xl">{item.title}</h3>
 					<p class="">
 						{item.description}
