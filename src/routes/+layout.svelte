@@ -109,10 +109,12 @@
 			<div class="p-8">
 				<h3 class="text-2xl mb-4">Paragraph</h3>
 				<p class="">
-					<a class="" href="https://github.com/zummon" target="_blank"
+					<a class="hover:underline focus:underline underline-offset-4" href="https://github.com/zummon" target="_blank"
 						>Made by zummon (Teerapat Anantarattanachai)</a
 					>
 				</p>
+				<p>Something breaks, needs upgrade. Let me know</p>
+				<p><a class="hover:underline focus:underline underline-offset-4" href="https://paypal.me/zummonSpace" target="_blank" >Donate to support</a></p>
 			</div>
 
 			<div class="p-8 text-white">
